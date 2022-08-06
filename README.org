@@ -10,3 +10,5 @@
 ** Keeping up to date
 Use chezmoi to upgrade itself: ~chezmoi upgrade~
 Then: ~chezmoi update~
+
+Also refer to https://mahmoudashraf.dev/blog/my-terminal-became-more-rusty/ for a few modern hot takes on some old faves
