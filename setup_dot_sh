@@ -8,14 +8,14 @@ set -e
 #  needed for virt emulation on M1
 PLAT=$(uname -p)
 if [ ${PLAT} = "arm" ]; then
-  /usr/sbin/softwareupdate --install-rosetta --agree-to-license
   echo "...installing rosetta2..."
+  /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 else
   echo "...skipping rosetta2 install..."
 fi
 
 if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
   echo "Applying dotfiles with chezmoi ..."
-  chezmoi init --apply --verbose https://github.com/fire-ant/dotflies.git
+  sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply  --verbose https://github.com/fire-ant/dotflies.git
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 fi

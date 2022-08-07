@@ -127,15 +127,15 @@ alias dockerhostshell='docker run -it --privileged --pid=host debian nsenter -t 
     # kubectl get --raw /apis/custom.metrics.k8s.io/v1beta1
 }
 
-(( $+commands[kubectx] )) && {
-    alias kx='kubectx'
-    compdef kx=kubectx
-}
+# (( $+commands[kubectx] )) && {
+#     alias kx='kubectx'
+#     compdef kx=kubectx
+# }
 
-(( $+commands[kubens] )) && {
-    alias kn='kubens'
-    compdef kn=kubens
-}
+# (( $+commands[kubens] )) && {
+#     alias kn='kubens'
+#     compdef kn=kubens
+# }
 
 # TODO members, groups, vault, Golang, Rust
 cat() {bat $* --plain}
