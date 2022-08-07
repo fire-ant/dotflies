@@ -45,27 +45,27 @@ use_ruby()
     export RUBY_ENGINE=$1
 }
 
-use_chef()
+use_cinc()
 {
-    # use chef workstation
+    # use cinc workstation
     EXPANDED_HOME=$(expand_path ~)
 
     # Override the GEM environment
 
-    log_status "Overriding default Ruby environment to use Chef Workstation"
+    log_status "Overriding default Ruby environment to use cinc Workstation"
 
-    RUBY_ABI_VERSION=$(ls /opt/chef-workstation/embedded/lib/ruby/gems/)
-    export GEM_ROOT="/opt/chef-workstation/embedded/lib/ruby/gems/$RUBY_ABI_VERSION"
-    export GEM_HOME="$EXPANDED_HOME/.chef-workstation/gem/ruby/$RUBY_ABI_VERSION"
-    export GEM_PATH="$EXPANDED_HOME/.chef-workstation/gem/ruby/$RUBY_ABI_VERSION:/opt/chef-workstation/embedded/lib/ruby/gems/$RUBY_ABI_VERSION"
+    RUBY_ABI_VERSION=$(ls /opt/cinc-workstation/embedded/lib/ruby/gems/)
+    export GEM_ROOT="/opt/cinc-workstation/embedded/lib/ruby/gems/$RUBY_ABI_VERSION"
+    export GEM_HOME="$EXPANDED_HOME/.cinc-workstation/gem/ruby/$RUBY_ABI_VERSION"
+    export GEM_PATH="$EXPANDED_HOME/.cinc-workstation/gem/ruby/$RUBY_ABI_VERSION:/opt/cinc-workstation/embedded/lib/ruby/gems/$RUBY_ABI_VERSION"
 
-    # Ensure ChefDK embedded tools are first in the PATH
+    # Ensure cincDK embedded tools are first in the PATH
 
-    log_status "Ensuring Chef Workstation and it's embedded tools are first in the PATH"
+    log_status "Ensuring cinc Workstation and it's embedded tools are first in the PATH"
 
-    PATH_add "$EXPANDED_HOME/.chef-workstation/gem/ruby/$RUBY_ABI_VERSION/bin/"
-    PATH_add /opt/chef-workstation/embedded/bin
-    PATH_add /opt/chef-workstation/bin
+    PATH_add "$EXPANDED_HOME/.cinc-workstation/gem/ruby/$RUBY_ABI_VERSION/bin/"
+    PATH_add /opt/cinc-workstation/embedded/bin
+    PATH_add /opt/cinc-workstation/bin
 }
 
 use_python()
