@@ -2,7 +2,7 @@
 
 set -e
 
- install brew
+#  install brew
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 #  needed for virt emulation on M1
