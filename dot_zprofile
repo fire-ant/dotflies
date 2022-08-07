@@ -7,10 +7,6 @@ if [[ -z "$LANG" ]]; then
 fi
 
 export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t"
-export VISUAL="emacsclient -c -a emacs"
-# export EDITOR=~/bin/EDITOR
-# export VISUAL=emacsclient
 export LC_COLLATE=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LC_MESSAGES=en_US.UTF-8
