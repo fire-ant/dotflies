@@ -119,13 +119,6 @@ alias gcmh='git commit --amend -C HEAD'
 # Docker
 alias dockerhostshell='docker run -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh'
 
-# Emacs
-alias doom='~/.emacs.d/bin/doom'
-alias oc='~/.emacs.d/bin/org-capture'
-if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
-    alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
-fi
-
 # Kubernetes
 (( $+commands[kubectl] )) && {
     alias k='nocorrect kubectl'

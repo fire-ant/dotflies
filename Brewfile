@@ -26,12 +26,14 @@ brew "gh"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh"
+brew "neovim"
 
 # productivity 
 brew "starship"
 cask "alacritty"
 cask "rectangle"
-cask "fig"
+# cask "fig" - unsure
+brew "tmux"
 
 # linux tools
 brew "aspell"
