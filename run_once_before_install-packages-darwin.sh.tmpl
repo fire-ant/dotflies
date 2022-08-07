@@ -1,7 +1,14 @@
 {{- if eq .chezmoi.os "darwin" -}}
-#!/bin/bash
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+#!/bin/bash
+PLAT=$(uname -p)
+if [ ${PLAT} = "arm" ]; then
+  BREW=/opt/homebrew/bin/brew 
+if [ ${PLAT} = "intel" ]; then 
+  BREW=/usr/local/bin/brew 
+fi
+
+${BREW} bundle --no-lock --file=/dev/stdin <<EOF
 
 # params
 cask_args appdir: "/Applications"

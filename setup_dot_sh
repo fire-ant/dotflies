@@ -6,15 +6,14 @@ set -e
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 #  needed for virt emulation on M1
-PLAT=$(uname -a | cut -d " " -f 15)
-if [ ${PLAT} = "arm64" ]; then
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+PLAT=$(uname -p)
+if [ ${PLAT} = "arm" ]; then
+  /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+  echo "...installing rosetta2..."
+if [ ${PLAT} = "intel" ]; then 
+  echo "...skipping rosetta2 install..."
 fi
 
-echo "Installing or updating chezmoi ..."
-brew bundle --file=- <<EOF
-    brew 'chezmoi'
-EOF
 if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
   echo "Applying dotfiles with chezmoi ..."
   chezmoi init --apply --verbose https://github.com/fire-ant/dotflies.git
