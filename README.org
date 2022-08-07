@@ -1,6 +1,11 @@
 * Dotfiles
   Just a bunch of junk you probably don't want to waste time with.
   If you decide to waste time, you'll need [[https://github.com/twpayne/chezmoi/][chezmoi]] and [[https://getantibody.github.io/install/][antibody]]
+
+cd ~
+curl --remote-name https://raw.githubusercontent.com/monfresh/dotfiles/master/dot_laptop.local
+mv dot_laptop.local .laptop.local
+
 ** Setup
 1. Install chezmoi: ~curl -sfL https://git.io/chezmoi | sh~
 2. Install antibody: ~curl -sfL git.io/antibody | sh -s - -b /usr/local/bin~
@@ -22,3 +27,9 @@ add 'code' to path:
 2# Add Visual Studio Code (code)
 3export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 4EOF`
+
+```
+cd ~
+curl --remote-name https://raw.githubusercontent.com/fire-ant/dotflies/master/dot_laptop.local
+mv dot_laptop.local .laptop.local
+```

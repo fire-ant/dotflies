@@ -2,12 +2,18 @@
 
 set -e
 
+#  needed for virt emulation on M1
+PLAT=$(uname -a | cut -d " " -f 15)
+if [ ${PLAT} = "arm64" ]; then
+/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+fi
+
 info_echo "Installing or updating chezmoi ..."
 brew bundle --file=- <<EOF
     brew 'chezmoi'
 EOF
 if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
   info_echo "Applying dotfiles with chezmoi ..."
-  chezmoi init --apply --verbose https://github.com/monfresh/dotfiles.git
+  chezmoi init --apply --verbose https://github.com/fire-ant/dotflies.git
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 fi
