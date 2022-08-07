@@ -28,6 +28,7 @@ export BAT_THEME=base16-256
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
+export EDITOR="code --wait"
 
 # https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/
 # unset KUBECONFIG
