@@ -10,7 +10,7 @@ PLAT=$(uname -p)
 if [ ${PLAT} = "arm" ]; then
   /usr/sbin/softwareupdate --install-rosetta --agree-to-license
   echo "...installing rosetta2..."
-elif [ ${PLAT} = "intel" ]; then 
+else
   echo "...skipping rosetta2 install..."
 fi
 

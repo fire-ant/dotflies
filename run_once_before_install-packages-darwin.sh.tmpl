@@ -4,7 +4,7 @@
 PLAT=$(uname -p)
 if [ ${PLAT} = "arm" ]; then
   BREW=/opt/homebrew/bin/brew 
-if [ ${PLAT} = "intel" ]; then 
+else
   BREW=/usr/local/bin/brew 
 fi
 
