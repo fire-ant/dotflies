@@ -31,5 +31,5 @@ add 'code' to path:
 ```
 cd ~
 curl --remote-name https://raw.githubusercontent.com/fire-ant/dotflies/master/setup_dot_sh
-mv setup_dot_sh setup.sh && chmod +x setup,sh
+mv setup_dot_sh setup.sh && chmod +x setup.sh
 ```
