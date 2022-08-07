@@ -12,3 +12,13 @@ Use chezmoi to upgrade itself: ~chezmoi upgrade~
 Then: ~chezmoi update~
 
 Also refer to https://mahmoudashraf.dev/blog/my-terminal-became-more-rusty/ for a few modern hot takes on some old faves
+
+
+to get rosetta 2:
+`/usr/sbin/softwareupdate --install-rosetta --agree-to-license`
+
+add 'code' to path:
+`cat << EOF >> ~/.zshrc
+2# Add Visual Studio Code (code)
+3export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+4EOF`
