@@ -49,4 +49,3 @@ path=($HOME/.local/bin
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)"
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
-export PATH=$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
