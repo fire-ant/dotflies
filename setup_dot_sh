@@ -19,3 +19,5 @@ if [ ! -f "$HOME/.config/chezmoi/chezmoi.toml" ]; then
   sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply  --verbose https://github.com/fire-ant/dotflies.git
   chmod 0600 "$HOME/.config/chezmoi/chezmoi.toml"
 fi
+# needed to correct permissions on any created completion files
+chmod -R 755 /opt/homebrew/share/zsh/site-functions
