@@ -46,6 +46,6 @@ path=($HOME/.local/bin
       /Library/TeX/texbin
       $path[@])
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(brew shellenv)"
 eval "$(starship init zsh)"
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
