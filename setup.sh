@@ -2,7 +2,6 @@
 
  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew bundle install brewfile
-chsh -s /bin/zsh
 
 #  needed for virt emulation on M1
 PLAT=$(uname -a | cut -d " " -f 15)
