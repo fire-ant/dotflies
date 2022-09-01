@@ -68,7 +68,7 @@ unset lazyload_fpath
 autoload -Uz compinit
 # ~/.zshrc
 autoload -Uz compinit
-if [ "$(whoami)" = "YOUR_NON_ADMIN_USER" ]; then
+if [ "$(whoami)" != "root" ]; then
     for dump in ~/.zcompdump(N.mh+24); do # Ignore insecure directories
     compinit -i
     done
