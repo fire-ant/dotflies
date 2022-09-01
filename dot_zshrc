@@ -77,7 +77,7 @@ else
     compinit
     done
 fi
-compinit -C
+# compinit -C
 # menu select
 unsetopt menu_complete
 
