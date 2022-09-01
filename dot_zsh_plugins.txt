@@ -1,5 +1,4 @@
 # -*- mode: sh -*-
-robbyrussell/oh-my-zsh path:plugins/chruby
 robbyrussell/oh-my-zsh path:plugins/rust
 # https://github.com/Dbz/kube-aliases/blob/master/docs/usage
 dbz/kube-aliases
@@ -15,7 +14,6 @@ zsh-users/zsh-completions path:src kind:fpath
 docker/compose path:contrib/completion/zsh kind:fpath
 docker/cli path:contrib/completion/zsh kind:fpath
 # TODO rbirnie/oh-my-zsh-keybase path:keybase kind:fpath
-lukechilds/zsh-better-npm-completion
 
 willghatch/zsh-cdr
 zsh-users/zaw

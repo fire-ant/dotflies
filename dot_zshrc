@@ -66,11 +66,18 @@ unset lazyload_fpath
 # completion https://github.com/getantibody/antibody/issues/242#issuecomment-404588896
 # https://github.com/caarlos0/dotfiles/commit/16250fdb5ae2c8f762bb0bfb743bad18e7ae387d
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
+# ~/.zshrc
+autoload -Uz compinit
+if [ "$(whoami)" = "YOUR_NON_ADMIN_USER" ]; then
+    for dump in ~/.zcompdump(N.mh+24); do # Ignore insecure directories
+    compinit -i
+    done
+else
+    for dump in ~/.zcompdump(N.mh+24); do # Ignore insecure directories
+    compinit
+    done
+fi
 compinit -C
-
 # menu select
 unsetopt menu_complete
 
