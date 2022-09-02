@@ -1,9 +1,11 @@
 {{- $ts_authkey := promptString "Tailscale AuthKey" -}}
 {{- $ts_hostname := promptString "Tailscale Hostname" -}}
+
+#!/bin/bash
 go install tailscale.com/cmd/tailscale{,d}@main
 sudo $HOME/go/bin/tailscaled install-system-daemon
-tailscale up  --authkey {{ $ts_authkey }} \
-  --hostname {{ $ts_hostname }} \
+tailscale up  --authkey "{{ $ts_authkey }}" \
+  --hostname "{{ $ts_hostname }}" \
   --accept-routes \
   --accept-dns \
   -- advertise-routes \
