@@ -73,8 +73,7 @@ if [ "$(whoami)" != "root" ]; then
     compinit -i
     done
 else
-    for dump in ~/.zcompdump(N.mh+24); do # Ignore insecure directories
-    compinit
+    for dump in ~/.zcompdump(N.mh+24); do
     done
 fi
 # compinit -C
