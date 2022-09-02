@@ -1,9 +1,9 @@
 #!/bin/bash
 go install tailscale.com/cmd/tailscale{,d}@main
 sudo $HOME/go/bin/tailscaled install-system-daemon
-tailscale up  --authkey {{ keyring "tailscale" .tailscale.user | quote }} \
+tailscale up  --authkey {{ keyring "tailscale" "tailscale" | quote }} \
   --accept-routes \
   --accept-dns \
-  -- advertise-routes \
+  --advertise-routes 192.168.0.0/24 \
   --ssh
 tailscale status
