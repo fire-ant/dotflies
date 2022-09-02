@@ -2,7 +2,7 @@
 {{- $keyid := promptString "GPG KeyID" -}}
 {{- $enable_secrets := promptString "Enable templates that require secrets manager? y/n" -}}
 [credential]
-    helper = osxkeychain
+    helper = "osxkeychain"
 [data]
     name = "Chris Lavery"
     email = "{{ $email }}"
@@ -14,7 +14,3 @@
     type = "github"
     user = "fire-ant"
     url = ""
-#[[data.forges]]
-#    type = "gitlab"
-#    user = "user"
-#    url = "gitlab.private.url/api/v4"
