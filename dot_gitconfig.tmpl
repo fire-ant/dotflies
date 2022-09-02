@@ -43,11 +43,6 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
-{{- /* forges is an array of hashes with keys: type, user, url */ -}}
-{{- range .forges }}
-[{{ .type }}{{- if ne .url "" }} "{{.url}}" {{- end -}}]
-  user = {{ .user }}
-{{- end }}
 [protocol]
     version = 2
 [credential]
