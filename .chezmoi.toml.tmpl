@@ -3,7 +3,7 @@
 {{- $keyid := promptString "GPG KeyID" -}}
 {{- $enable_secrets := promptString "Enable templates that require secrets manager? y/n" -}}
 [data]
-    name = "{{ name }}"
+    name = "{{ $name }}"
     email = "{{ $email }}"
     keyid = "{{ $keyid }}"
 [data.features]
