@@ -1,8 +1,6 @@
 {{- $email := promptString "email" -}}
 {{- $keyid := promptString "GPG KeyID" -}}
 {{- $enable_secrets := promptString "Enable templates that require secrets manager? y/n" -}}
-[credential]
-    helper = "osxkeychain"
 [data]
     name = "Chris Lavery"
     email = "{{ $email }}"
