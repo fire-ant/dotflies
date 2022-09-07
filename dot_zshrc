@@ -65,7 +65,6 @@ unset lazyload_fpath
 
 # completion https://github.com/getantibody/antibody/issues/242#issuecomment-404588896
 # https://github.com/caarlos0/dotfiles/commit/16250fdb5ae2c8f762bb0bfb743bad18e7ae387d
-autoload -Uz compinit
 # ~/.zshrc
 autoload -Uz compinit
 if [ "$(whoami)" != "root" ]; then
@@ -176,7 +175,7 @@ alias qpo='pass otp -c "$(find -L "$HOME/.password-store" \( -name .git\* -o -na
     fi
 }
 
-autoload -U +X bashcompinit && bashcompinit
+# autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 complete -C /usr/local/bin/terraform terraform
 
